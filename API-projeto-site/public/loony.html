@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="imagem/png" href="./Imagens/logo2.PNG">
+  <title>UnderShop</title>
+</head>
+
+
+
+<!-- AUDIOS -->
+<audio id="typedrocst" src="./musicas/loonyjetski - GIVENCHY PUNCH (Music Video).mp3"></audio>
+<audio id="rackscst" src="./musicas/loonyjetski - CANADA (feat. bitetti, elkay).mp3"></audio>
+<audio id="juulcst" src="./musicas/3. fendi fendi ft. elkay (prod. loonyjetski).mp3"></audio>
+
+<!-- HEADER -->
+<body style="background-color: blueviolet;">
+  <div class="header">
+    <div class="container">
+      <img src="./Imagens/logo2.png" />
+      <h1><span class="text-header">Under</span>Shop</h1>
+      <ul>
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li><a href="#sobre" class="text-header">Shop</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONTEUDO -->
+  <div id="home" class="conteudo">
+    <div class="imgArtistas">
+      <img src="./Imagens/loony.PNG">
+      <h1>Loony</h1>
+    </div>
+    <div class="container">
+      <div class="titulo">
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>UnderShop</p>
+  </div>
+
+
+
+
+  <!-- PRIMEIRA MUSICA -->
+  <div class="fundoMusicas">
+    <div class="musicas">
+      <img src="./Imagens/givenchy.PNG">
+      <p>Givenchy Punch</p>
+      <div class="imgPlayer">
+        <img src="./Imagens/106050835.png" onClick="typedro()" style="cursor: pointer;">
+        <img id="pausetypedro" src="./Imagens/pause.png" onClick="typedropause()"
+          style="cursor: pointer; display: none; z-index: 3;">
+      </div>
+      <div class="player">
+      </div>
+    </div>
+  </div>
+
+  <!-- SEGUNDA MUSICA -->
+  <div class="fundoMusicas">
+    <div class="musicas">
+      <img src="./Imagens/canada.PNG">
+      <p>Canada</p>
+      <div class="imgPlayer">
+        <img src="./Imagens/106050835.png" onClick="racks()" style="cursor: pointer;">
+        <img id="pauseracks" src="./Imagens/pause.png" onClick="rackspause()"
+          style="cursor: pointer; display: none; z-index: 3;">
+      </div>
+      <div class="player">
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- TERCEIRA MUSICA -->
+  <div class="fundoMusicas">
+    <div class="musicas">
+      <img src="./Imagens/fendi.PNG">
+      <p>Fendi</p>
+      <div class="imgPlayer">
+        <img src="./Imagens/106050835.png" onClick="juul()" style="cursor: pointer;">
+        <img id="pausejuul" src="./Imagens/pause.png" onClick="juulpause()"
+          style="cursor: pointer; display: none; z-index: 3;">
+      </div>
+      <div class="player">
+      </div>
+    </div>
+  </div>
+
+<div class="btn-compra">
+<a href="./login.html" style="text-decoration: none;"><h1>Comprar Feat!</h1></a>
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+  //  TYPE DRO
+  function typedro() {
+    typedrocst.play();
+    pausetypedro.style.display = 'block';
+  }
+
+  function typedropause() {
+    typedrocst.pause();
+    pausetypedro.style.display = 'none';
+  }
+  // RACKS
+  function racks() {
+    rackscst.play();
+    pauseracks.style.display = 'block';
+  }
+
+  function rackspause() {
+    rackscst.pause();
+    pauseracks.style.display = 'none';
+  }
+
+  // JUUL
+  function juul() {
+    juulcst.play();
+    pausejuul.style.display = 'block';
+  }
+
+  function juulpause() {
+    juulcst.pause();
+    pausejuul.style.display = 'none';
+  }
+
+
+</script>

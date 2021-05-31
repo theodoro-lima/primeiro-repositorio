@@ -1,0 +1,129 @@
+/* PÁGINA DO CONTATO */
+
+.contato {
+    background-color: #ecf0f1;
+}
+
+.contato .container {
+    overflow: auto;
+}
+
+.contato h1 {
+    padding: 40px 0;
+}
+
+.formulario {
+    float: left;
+    width: 500px;
+}
+
+form label, form p{
+    display: block;
+    font-size: 20px;
+    margin-bottom:10px ;
+}
+
+.btn-green {
+    color: white;
+    background-color: rgb(255, 27, 255);
+    margin: 20px 0 50px 0;
+    border: 0;
+    padding: 10px 20px;
+
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+.imagem-lateral {
+    overflow: auto;
+}
+
+.contato img {
+    float: right;
+    width: 85%;
+}
+
+.input-padrao {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    width: 90%;
+
+    border-radius: 5px;
+    border: solid 1px #bbbbbb;
+}
+
+.div-radio {
+    margin-bottom: 30px;
+}
+
+/* PÁGINA DO LOGIN */
+
+.pag-login {
+    /* background-color: #ecf0f1; */
+    text-align: center;
+    padding: 50px 0;
+}
+
+.pag-login h1 {
+    margin-bottom: 40px;
+}
+
+.pag-login .input-padrao {
+    width: 50%;
+    display: flex;
+    margin-left: 80px;
+}
+
+.box-login {
+    margin-right: 90px;
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    box-shadow:  3px 3px 5px 2px rgb(0, 0, 0);
+    padding: 60px 20px 0px 20px;
+    border-radius: 20px;
+    width: 400px;
+    color: white;
+    background: linear-gradient(#ad48ffa8,transparent,#ad48ffa8)
+}
+
+.box-login h1{
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 1px 1px purple;
+}
+
+
+.pag-login .btn-green {
+    display: block;
+    float: none;
+    margin: auto;
+}
+
+/* EXTRA */
+
+.extra {
+    margin: 10px;
+}
+
+.extra img {
+  height: 50px;
+   visibility: hidden;
+}
+
+.extra .msg_erro {
+    background-color: sandybrown; 
+    color: black; 
+    visibility: hidden;
+}
+
+.text-cadastro{
+    padding-top: 20px;
+    margin-bottom: -30px;
+}
+
+.text-cadastro a{
+    color: rgb(255, 238, 3);
+    font-weight: bolder;
+    text-decoration: none;
+}

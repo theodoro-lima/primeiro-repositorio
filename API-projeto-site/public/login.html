@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto IoT - Sobre</title>
+    <link rel="stylesheet" href="css/contato-e-login.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="imagem/png" href="./Imagens/logo2.PNG">
+
+</head>
+
+<body>
+    <!--header inicio-->
+    <div class="header">
+        <div class="container">
+          <img src="./Imagens/logo2.png" />
+          <h1><span class="text-header">Under</span>Shop</h1>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="#sobre">Shop</a></li>
+            <li><a href="#sobre" class="text-header">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    <!--header fim-->
+      
+
+    <div class="fundoLogin">
+    <div class="pag-login">
+        <div class="container">
+            <div class="box-login">
+                <h1>Login</h1>
+                <form id="form_login" method="post" onsubmit="return entrar()">
+                    Usuário:
+                    <input type="text" class="input-padrao" name="login">
+                    <br>
+                    Senha:
+                    <input type="password" class="input-padrao" name="senha">
+                    <br>
+                    <button id="btn_entrar" class="btn-green">Entrar</button>
+                </form>
+
+                <div class="text-cadastro">Ainda não é cadastrado? <a href="cadastro.html">Cadastre-se</a></div>
+
+                <div class="extra">
+                    <div id="div_erro" class="msg_erro">
+                    </div>
+
+                    <img src="loading.gif" id="img_aguarde"  > <!--style="display: none;"-->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+
+
+</body>
+
+</html>
+<script>
+
+    function entrar() {
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+
+                    window.location.href = 'telaLogado.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+
+</script>
