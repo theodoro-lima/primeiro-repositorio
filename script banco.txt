@@ -1,0 +1,16 @@
+create database teste;
+use teste;
+
+
+create table usuario (
+id int primary key auto_increment,
+nome varchar(45),
+login varchar(45),
+senha varchar(45),
+email varchar(45)
+);
+
+
+drop table usuario;
+
+select * from usuario;
